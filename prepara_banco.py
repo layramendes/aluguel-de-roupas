@@ -16,19 +16,21 @@ except mysql.connector.Error as err:
 
 cursor = conn.cursor()
 
-cursor.execute("DROP DATABASE IF EXISTS `base_template`;")
+cursor.execute("DROP DATABASE IF EXISTS `aluguel_de_roupas`;")
 
-cursor.execute("CREATE DATABASE `base_template`;")
+cursor.execute("CREATE DATABASE `aluguel_de_roupas`;")
 
-cursor.execute("USE `base_template`;")
+cursor.execute("USE `aluguel_de_roupas`;")
 
 
 # criando tabelas
 TABLES = {}
-TABLES['Email'] = ('''
+TABLES['Cadastro'] = ('''
       CREATE TABLE `emails` (
       `id` int(11) NOT NULL AUTO_INCREMENT,
+      `nome` varchar(50) NOT NULL,
       `email` varchar(50) NOT NULL,
+      `mensagem` varchar(150) NOT NULL,
       PRIMARY KEY (`id`)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;''')
 

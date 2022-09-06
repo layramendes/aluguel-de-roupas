@@ -5,6 +5,6 @@ from aluguel_de_roupas import app, db
 
 @app.route('/')
 def index():
-    return render_template('index.html', titulo='index')
+    return render_template('index.html')
 
 

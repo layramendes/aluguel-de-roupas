@@ -8,5 +8,5 @@ SQLALCHEMY_DATABASE_URI = \
         usuario = 'layramendes',
         senha = 'Robertinho123?',
         servidor = 'localhost',
-        database = 'aluguel-de-roupas'
+        database = 'aluguel_de_roupas'
     )
