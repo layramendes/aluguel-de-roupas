@@ -1,4 +1,5 @@
 import os
+from flask import url_for
 
 SECRET_KEY = 'projeto'
 

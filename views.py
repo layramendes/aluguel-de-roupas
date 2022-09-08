@@ -7,4 +7,12 @@ from aluguel_de_roupas import app, db
 def index():
     return render_template('index.html')
 
+@app.route('/contato')
+def contato():
+    return render_template('contato.html')
+
+
+@app.route('/sobre')
+def sobre():
+    return render_template('sobre.html')
 
