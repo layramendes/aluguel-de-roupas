@@ -1,13 +1,13 @@
-import os
-from flask import url_for
+import configparser
 
-SECRET_KEY = 'projeto'
+config_file = configparser.ConfigParser()
+config_file.read("env.ini")
 
 SQLALCHEMY_DATABASE_URI = \
     '{SGDB}://{usuario}:{senha}@{servidor}/{database}'.format(
-        SGDB = 'mysql+mysqlconnector',
-        usuario = 'layramendes',
-        senha = 'Robertinho123?',
-        servidor = 'localhost',
-        database = 'aluguel_de_roupas'
+        SGDB='mysql+mysqlconnector',
+        usuario=config_file['mysql']['usuario'],
+        senha=config_file['mysql']['senha'],
+        servidor=config_file['mysql']['servidor'],
+        database=config_file['mysql']['database']
     )
